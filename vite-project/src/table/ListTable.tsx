@@ -1,21 +1,16 @@
-type Client ={
-    name: string;
-    dateStart:string;
-    dateEnd:string;
-    cheakPay:boolean;
-    contact:string;
+import { useState } from "react"
+import { Users } from "./addClient/AddClient"
 
-}
-export function ListTable(prop:Client){
+
+export function ListTable(prop:Users){
+    const [pay,setPay] = useState(prop.pay)
     return<>
-        <tr><td>{prop.name}</td><td>{prop.dateStart}</td><td>{prop.dateEnd}</td><td>{cheakPay(prop.cheakPay)}</td><td>{prop.contact}</td></tr>
+        <tr className="cliet__content"><td className="client__item">{prop.fullName}</td>
+        <td className="client__item">{prop.startDate}</td>
+        <td className="client__item">{prop.getDate}</td>
+        <td className="client__item"><select value={pay} onChange={(e)=>setPay(e.target.value)}><option>Оплачено</option><option>Не оплачено</option></select></td>
+
+        <td className="client__item">{prop.contact}</td>
+        <td className="client__item"><button className="off">Отключить</button><button className="on">Включить</button></td></tr>
     </>
-}
-function cheakPay(cheak:boolean):string{
-    if(cheak){
-        return 'Оплачен'
-    }
-    else{
-        return 'Не оплачено'
-    }
 }

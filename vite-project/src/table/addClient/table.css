@@ -1,0 +1,40 @@
+.cliet__header {
+    
+}
+.client__item:not(:last-child){
+    
+   
+   
+}
+.client__item{
+    border:  none;
+    outline: 1px solid gray;
+    padding: 10px;
+}
+.client__header-item{
+    padding: 25px;
+    justify-self: center;
+    background-color: #CFCFCF;
+}
+.cliet__content{
+
+}
+.on {
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: green;
+}
+.off {
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: red;
+
+}
+.cliet__content .client__item:last-child{
+    display: flex;
+    gap: 10px;
+}
