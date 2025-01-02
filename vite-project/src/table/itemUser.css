@@ -1,0 +1,9 @@
+.user__item{
+    max-width:1920;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    outline: 1px solid gray;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 5px;
+}
