@@ -1,15 +1,16 @@
 
 import './App.css'
+import { ClientList } from './compont/header'
 
-import { AddClient } from './table/addClient/AddClient'
 function App() {
-
+  
 
   return (
     <>
-    <AddClient/>
+    <div className="container">
+      <ClientList/>
 
-  
+    </div>
     </>
   )
 }
